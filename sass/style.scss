@@ -1,0 +1,309 @@
+@import 'variables';
+@import 'utilities';
+@import 'header';
+@import 'hero';
+@import 'cube';
+@import 'services';
+@import 'contact';
+@import 'mixin';
+@import 'work';
+@import 'about';
+@import 'footer';
+*, ::before, ::after {
+    // border: 1px solid red;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // scroll-padding-top: 7vh;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    // background: $background-primary;
+    width: 100%;
+    // position: relative;
+    font-family: $font-content;
+    position: relative;
+
+    a, span {
+        color: $brand;
+    }
+}
+
+.container {
+    // border: 2px solid #fff000;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 200vh;
+    // SIDEBAR OVERLAY
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        width: 100%;
+        height: 100%;
+        background: #000a;
+    }
+
+    // DECORATION LINES
+    // .decoration-line {
+    //     position: fixed;
+    //     top: 10vh;
+    //     z-index: 1;
+    //     right: 0;
+    //     width: 40vw;
+    //     height: .2rem;
+    //     background: #000;
+    //     transition: 1s;
+
+    //     &.active-line {
+    //         transform: translateX(60vw);
+    //     }
+    // }
+
+    // ACTIVE SIDEBAR CLASS
+    &.active-container {
+        &::after {
+            left: 0;
+        }
+    }
+    main {
+        min-height: 100vh;
+        width: 100%;
+        // border: 2px solid green;
+        // border: none;
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10vh 5vw;
+            background: $background-secondary;
+            // border-bottom: .15rem dashed rgba(0, 0, 0, 0.247);
+            position: relative;
+            border: none;
+            // overflow: hidden;
+
+            .section-title {
+                position: relative;
+                // top: 8vh;
+                padding: 1rem 0;
+                // overflow: hidden;
+                // border: 1px solid red;
+
+                // background: #fff;
+                @include md {
+                    top: 9vh;
+                }
+                h1 {
+                    // border: $border-dark-sm;
+                    // border-color: transparent;
+                    text-transform: capitalize;
+                    text-transform: uppercase;
+                    // font-family: $font-title;
+                    font-size: 1.05rem;
+                    // font-size: 3rem;
+                    color: $text-dark;
+                    font-weight: 600;
+                    // padding: 0 .5rem;
+                    // width: 7rem;
+                    width: 100%;
+                    transition: 1.5s;
+                    // transform: translateX(-1rem);
+                    @include sm {
+                        // width: 10rem;
+                        font-size: 2rem;
+                    }
+                }
+
+                // DECORATION LINES
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 10vh;
+                    right: 0;
+                    width: 30vw;
+                    height: .15rem;
+                    background:#000;
+                    background: purple;
+                    opacity: 0;
+                    transition: 1s;
+                    transform: translateX(80%);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: .15rem;
+                    height: 35vh;
+                    background: #000;
+                    background: purple;
+                    opacity: 0;
+                    transition: 1s;
+                    transform: translateY(50%);
+                }
+
+                &.active-title {
+                    h1 {
+                        opacity: .6;
+                        // transform: translateY(0);
+                    }
+
+                    &::before {
+                    transform: translateX(5vw);
+                    background: #000;
+                    opacity: .2;
+                    }
+                    &::after {
+                        transform: translateY(-10vh);
+                        opacity: .2;
+                        background: #000;
+                        }
+                }
+            }
+        }
+    }
+
+    .section-pad {
+        // border: 1px solid $brand-purple;
+        width: 100%;
+        height: 95vh;
+        padding: 5vh 5vw 0;
+        position: relative;
+
+        &.pad-1 {
+            // display: grid;
+            // place-items: center;
+
+            figure {
+                width: 100%;
+                height: 70%;
+                // height: auto;
+                overflow: hidden;
+                @include md {display:none;}
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @include md {
+                background-image: url('../img/lp-hair.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 50%;
+                background-position: right;
+                background-color: #fafafa;
+            }
+
+            .info {
+                color: $text-light;
+                opacity: .9;
+                display: block;
+                width: 100%;
+                &.info-top {
+                    // border: 1px solid red;
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 1.6;
+                        text-transform: capitalize;
+                        @include md {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .cta {
+                        margin: 1rem 0 5vh;
+                        .btn {
+                            width: 13rem;
+                            border: 1px solid #fff;
+                            @include md {
+                                width: 13rem;
+                            }
+                        }
+                    }
+                }
+                @include md {
+                    color: $text-dark;
+                    // border: 1px solid red;
+                    width: 50%;
+                    margin-top: 20vh;
+                }
+            }
+        }
+        &.pad-2 {
+            position: relative;
+            isolation: isolate;
+            background-color: #000a;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(../img/trevor-cole-zMEzuZlmIQY-unsplash.jpg);
+                background-position: 30%;
+                background-size: cover;
+                mix-blend-mode: overlay;
+                opacity: 1;
+                z-index: -1;
+                @include md {
+                    mix-blend-mode: normal;
+                    background-attachment: fixed;
+                }
+            }
+            @include md {
+                background-image: url('../img/trevor-cole-zMEzuZlmIQY-unsplash.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: contain;
+                background-position: right;
+                background-color: #000;
+            }
+
+            .info {
+                // opacity: .9;
+                display: block;
+                width: 100%;
+                position: relative;
+                top: 5vh;
+                &.info-top {
+                    // border: 1px solid red;
+                    p {
+                        font-size: 1.2rem;
+                        color: yellow;
+                        color: $text-light;
+                        line-height: 1.6;
+                        text-transform: capitalize;
+                        @include md {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .cta {
+                        margin: 1rem 0 5vh;
+                        .btn {
+                            width: 13rem;
+                            border: 1px solid #fff;
+                            @include md {
+                                width: 13rem;
+                            }
+                        }
+                    }
+                }
+                @include md {
+                    color: $text-dark;
+                    // border: 1px solid red;
+                    width: 50%;
+                    margin-top: 20vh;
+                }
+            }
+        }
+    }
+}

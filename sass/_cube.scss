@@ -1,0 +1,202 @@
+// VARIABLES
+$box-color: #0ff7;
+$rotate-speed: 30s;
+$bounce-speed: 1.5s;
+$conic-bg: repeating-conic-gradient(from 45deg, #111 0deg 90deg,
+    #222 90deg 180deg);
+
+
+.cube-container {
+        background-color: #000;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75px;
+        border: 2px solid #000;
+        border: none;
+        overflow: hidden;
+        perspective: 10em;
+        perspective-origin: 50% calc(50% - 2.5em);
+        
+    }
+// SCENE 
+.scene {
+    position: relative;
+    transform-style: preserve-3d;
+    // transform: rotateY(30deg);
+    animation: scene $rotate-speed infinite linear;
+
+    // SCENE
+    @keyframes scene {
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+}
+
+// BALL
+.ball {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: lightblue;
+    transform-style: preserve-3d;
+    position: absolute;
+    left: -.5em;
+    bottom: 1em;
+    // transform: rotateY(-30deg);
+    background-image: radial-gradient(circle at top, $brand, 50%,#000);
+    // SAME ANIMATION AS SCENE IN REVERSE TO KEEP BALL CENTERED 
+    // + BALL BOUNCE ANIMATION
+    // animation:  ball-bounce $bounce-speed infinite ease-out,
+    //             scene $rotate-speed infinite linear reverse;
+    animation:  scene $rotate-speed infinite linear reverse;
+
+    // BALL BOUNCE KEYFRAMES 
+    @keyframes ball-bounce {
+        0%,
+        100% {
+            bottom: .5em;
+        }
+
+        50% {
+            bottom: 2em;
+            animation-timing-function: ease-in;
+        }
+    }
+}
+
+// BALL SHADOW
+.ballShadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-color: yellow;
+    background-image: radial-gradient(#0007, #0000 50%);
+    // animation: ball-shadow $bounce-speed infinite ease-out;
+    // BALL SHADOW KEYFRAMES 
+    @keyframes ball-shadow {
+        0%, 10%, 90%,
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(2);
+            opacity: .5;
+            animation-timing-function: ease-in;
+        }
+    }
+}
+
+// CUBE 
+.cube {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    bottom: -1em;
+    left: -1em;
+    transform-style: preserve-3d;
+    // animation: cube-height $bounce-speed infinite linear;
+
+    .left,
+    .right,
+    .front,
+    .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $box-color;
+        // background: $overlay;
+        transform-style: preserve-3d;
+        box-shadow: inset 0 0 0.5em #000a;
+        display: grid;
+        place-items: center;
+
+        p {
+            font-family: $font-title;
+            font-size: .25em;
+            text-transform: uppercase;
+        }
+    }
+
+    .front {
+        transform: translateZ(1em);
+        background: $overlay-dark;
+        p {
+            color: $brand;
+        }
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(1em);
+        background-color: $brand;
+        p {
+            color: $overlay-blue-dark;
+        }
+    }
+    
+    .back {
+        transform: rotateY(180deg) translateZ(1em);
+        background-color: $overlay-blue-light;
+        p {
+            color: #fff;
+        }
+    }
+
+    .left {
+        transform: rotateY(270deg) translateZ(1em);
+        background-color: $brand;
+        p {
+            color: $overlay-blue-dark;
+        }
+    }
+
+    .top {
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        // background-color: $box-color;
+        background: #0009;
+        transform: translateY(-50%) rotateX(90deg);
+        box-shadow: inset 0 0 0.5em #000a;
+    }
+    .bottom {
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        bottom: 0;
+        background-color: $box-color;
+        background-color: #0007;
+        transform: translateY(50%) rotateX(90deg);
+        box-shadow:  0 0 0.5em #000;
+    }
+
+    // CUBE ANIMATION 
+    @keyframes cube-height {
+        0%, 100% {
+            height: 1.5em;
+        }
+        10%, 90% {
+            height: 2em;
+        }
+    }
+}
+
+// FLOOR
+.floor {
+    position: absolute;
+    // top to position center of the floor with bottom of the cube 
+    top: 1em;
+    // floor rotated 90deg = not visible before perspective is added
+    transform: translate(-50%, -50%) rotateX(90deg);
+    width: 15em;
+    height: 15em;
+    background-image: radial-gradient(#0000, #000 75% ),
+                        $conic-bg;
+    background-size: 100%, 1em 1em;
+
+}

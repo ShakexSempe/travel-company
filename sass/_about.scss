@@ -1,0 +1,113 @@
+.about {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        @include md {
+            flex-direction: row;
+        }
+    }
+    .about-article {
+        // border: 1px solid red;
+        margin: 5vh 0;
+        overflow: hidden;
+
+        p {
+            line-height: 1.5;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $overlay-blue-dark;
+            margin-bottom: 1rem;
+            transition: 1s;
+            @include md {
+                font-size: 1.05rem;
+            }
+            &.article-intro {
+                font-weight: 600;
+
+                &::first-letter {
+                    color: $brand;
+                    font-family: $font-title;
+                    font-size: 2rem;
+                    float: left;
+                    margin-right: .2rem;
+                    // border: 1px solid blue;
+                    border-radius: .25rem;
+                    padding: 0 .3rem 0 .25rem;
+                    background: $overlay-dark;
+                    text-shadow: 2px 2px 0px #000;
+                    box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+                    @include md {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            // IO ITEM 
+            &.io-item {
+                opacity: .1;
+                transform: translateY(1rem);
+            }
+            &.active-item {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    
+    }
+
+    .about-img {
+        // border: 2px solid red;
+        overflow: hidden;
+        border-radius: $border-radius-sm;
+
+        img {
+            width: 100%;
+            transition: 1s;
+        }
+
+        @include md {
+            width: 100%;
+            opacity: 1;
+            // position: relative;
+            // top: -30vh;
+        }
+
+        // IO CLASS
+        &.io-item {
+            img {
+                transform: scale(2);
+                opacity: 1;
+            }
+        }
+        &.active-item {
+            img {
+            transform: scale(1);
+            opacity: 1;
+            transition: 1.5s;
+            }
+
+
+        }
+    }
+
+        // ABOUT BTN
+        .about-btn {
+            font-size: 1rem;
+            margin: 5vh 0 1rem;
+            @include md {
+                margin-top: -5vh;
+            }
+
+            &::before {
+                background: $btn-brand-light;
+                border: none;
+                box-shadow: $box-shadow;
+            }
+            &::after {
+                background: $btn-brand-light-hover;
+                border: $border-light-sm;
+                box-shadow: $box-shadow-hover;
+            }
+        }
+}

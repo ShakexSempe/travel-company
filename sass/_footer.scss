@@ -1,0 +1,22 @@
+footer {
+    min-height: 20vh;
+    width: 100%;
+    background: $footer-bg;
+    padding: 5vh 5vw 8vh;
+    border: 2px solid $brand;
+    .copyright {
+        border-radius: 1rem;
+        color: #fff;
+        height: 50%;
+        width: 100%;
+        padding: 1rem;
+        text-transform: capitalize;
+
+        p {
+            line-height: 1.7;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+section {
+    h2 {
+        font-size: 1rem;
+        text-transform: capitalize;
+        @include md {
+            font-size: 1.5rem;
+        }
+    }
+
+    ul {
+        // border: 1px solid red;
+        margin: 1rem 0;
+        li {
+            list-style: none;
+            margin-bottom: .5rem;
+
+            p {
+                span {
+                    color: $text-dark; 
+                    // border: 1px solid red;
+                    padding-right: .5rem;
+                }
+            }
+        }
+    }
+}
+.section-flex-container {
+    // border: 2px solid blue;
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    @include md {
+        flex-direction: row;
+        justify-content: center;
+        padding: 5vh 5vw;
+        gap: 5vw;
+        text-align: center;
+    }
+    
+}
+
+.section-grid-container {
+    // border: 1px solid red;
+    margin: 10vh 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    @include md {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 5vh 5vw;
+        text-align: center;
+    }
+}
+
+.group {
+    padding: .5rem;
+    transition: .25s;
+    position: relative;
+    isolation: isolate;
+    transform: scale(.985);
+    // BOX SHADOW
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: $group-shadow;
+        transition: .25s;
+        opacity: 0;
+        z-index: -1;
+    }
+    &:hover {
+        transform: scale(1);
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    // IO CLASS 
+    &.io-item {
+        h2 {
+            letter-spacing: .05rem;
+            opacity: 0;
+            transition: 1s;
+        }
+        ul {
+            li {
+                transform: translateX(5vw);
+                opacity: 0;
+            }
+        }
+    }
+    // IO CLASS 
+    &.active-item {
+        h2 {
+            letter-spacing: normal;
+            opacity: 1;
+            transition: 1s;
+        }
+        ul {
+            li {
+                transform: translateX(0);
+                opacity: 1;
+                transition: 1s;
+                transition-delay: .25s;
+                // transition-delay: calc(.25s + .25s * var(--s));
+            }
+        }
+    }
+}
