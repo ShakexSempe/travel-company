@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&family=Taviraj:wght@200;300;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&family=Taviraj:wght@200;300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,700&display=swap');
 
 // FONTS 
 $font-title: 'Taviraj', serif ;
-$font-content:  'Montserrat',sans-serif;
+$font-content:  'Roboto', sans-serif;
 
 // TEXT-COLORS 
 $text-light: #fafafa;
@@ -22,9 +23,11 @@ $brand-gold: #ead2a1;
 $brand-purple: #3f369f;
 $brand-purple: hsl(300, 100%, 65%);
 $brand: #314489;
-$brand-dark: #000;
-$aside-bg: linear-gradient(0deg, #000, #161616);
 $brand-light: #f4f4f4;
+$brand-light: hsl(227, 47%, 46%);
+$brand-dark: hsl(227, 47%, 26%);
+$brand-darker: hsl(227, 47%, 16%);
+$aside-bg: linear-gradient(90deg, hsl(227, 47%, 6%), hsl(227, 47%, 10%));
 
 // SPAN COLORS
 $span-gold: #ead2a1;
@@ -39,10 +42,11 @@ $background-primary: #000;
 $background-secondary: radial-gradient(#f4f4f4, #fff);
 $background-secondary: #fafafa;
 $background-secondary: linear-gradient(90deg, #fafafa 100%, #fff 0%);
-$header-bg: #fafafa;
+$header-bg: linear-gradient(#fff, #fafafa, #fff);
+$header-bg: #fff;
 $footer-nav: linear-gradient(0deg, #000, #111);
-$footer-nav: #000;
-$footer-bg: linear-gradient(0deg, #000 30%, #0a0c0f);
+$footer-nav: linear-gradient(0deg, $brand-darker 30%, $brand-dark);
+$footer-bg: linear-gradient(0deg, $brand-dark 30%, $brand);
 
 // BRAND OVERLAY
 $overlay: linear-gradient(-60deg, #29323c 0%, #485563 100%);
@@ -83,7 +87,7 @@ $border-light-sm: .105rem solid rgba(255, 255, 255, .2);
 $border-dark-sm: .105rem solid rgba(0, 0, 0, .7);
 $border-light-md: .15rem solid rgba(255, 255, 255, .2);
 $border-dark-md: .15rem solid rgba(0, 0, 0, .2);
-$border-brand-sm: .105rem solid rgba(234, 210, 161, .4);
+$border-brand-sm: .105rem solid hsl(227, 47%, 26%);
 $border-brand-md: .15rem solid rgba(234, 210, 161, 1);
 // BOX SHADOWS
 $group-shadow: 0 -.25rem 1rem rgba(0, 0, 0, .250);

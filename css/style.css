@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&family=Taviraj:wght@200;300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,700&display=swap");
 .menu {
   border: 1px solid #0003;
   background: linear-gradient(90deg, #fafafa 100%, #fff 0%);
@@ -176,7 +176,7 @@
   height: auto;
   width: 100%;
   padding: 0.5rem 5vw;
-  background: #000;
+  background: linear-gradient(0deg, #161e3c 30%, #233161);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -199,7 +199,7 @@
 .footer-nav .item a i {
   font-size: 1.05rem;
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: 1s;
 }
 @media (min-width: 768px) {
@@ -249,7 +249,7 @@
 header {
   position: fixed;
   top: 0;
-  background: #fafafa;
+  background: #fff;
   height: 7vh;
   width: 100%;
   margin: 0;
@@ -267,6 +267,8 @@ header {
   }
 }
 header .logo {
+  border: 0.105rem solid rgba(0, 0, 0, 0.7);
+  padding: 0.15rem 0.5rem;
   overflow: hidden;
   width: 7rem;
   width: max-content;
@@ -283,8 +285,9 @@ header .logo a {
   color: #000;
   text-transform: capitalize;
   font-size: 1.05rem;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.05rem;
 }
 header .logo a span {
   color: #fafafa;
@@ -296,7 +299,7 @@ header .logo a span {
 }
 header aside {
   position: absolute;
-  background: linear-gradient(0deg, #000, #161616);
+  background: linear-gradient(90deg, #080b16, #0e1325);
   width: 100%;
   height: 100vh;
   top: 7vh;
@@ -347,7 +350,7 @@ header aside ul li.aside-dropdown {
 }
 header aside ul li.aside-dropdown button {
   text-transform: capitalize;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fafafa;
   font-size: 1rem;
   background: transparent;
@@ -385,14 +388,13 @@ header aside ul li.aside-dropdown .dropdown-content a {
 header aside ul li.aside-dropdown:hover {
   border-color: #fff3;
   border-radius: 0;
-  border-radius: 0.5rem;
   transition: border 0.5s;
 }
 header aside ul li.aside-dropdown:hover button {
-  color: #314489;
+  opacity: 0.7;
 }
 header aside ul li.aside-dropdown:hover button i {
-  opacity: 0.5;
+  opacity: 0.7;
   transform: rotate(180deg);
 }
 header aside ul li.aside-dropdown:hover .dropdown-content {
@@ -432,7 +434,7 @@ header aside .contact-links a {
   transition: 1s;
 }
 header aside .contact-links a i {
-  color: #314489;
+  color: #3e56ac;
   width: 1.5rem;
   font-size: 1.25em;
   padding-bottom: 0.25rem;
@@ -528,7 +530,6 @@ header .navbar ul li {
   text-transform: capitalize;
 }
 header .navbar ul li a {
-  font-family: "Taviraj", serif;
   letter-spacing: 0.025rem;
   color: #000;
   text-decoration: none;
@@ -548,8 +549,7 @@ header .navbar ul li a::after {
   transition: 0.25s;
 }
 header .navbar ul li a:hover {
-  color: #ead2a1;
-  opacity: 1;
+  opacity: 0.7;
 }
 header .navbar ul li a:hover::after {
   width: 70%;
@@ -626,7 +626,7 @@ header.aside-header .logo {
 }
 .hero .slogan h1 {
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 @media (min-width: 820px) {
   .hero .slogan h1 {
@@ -639,11 +639,13 @@ header.aside-header .logo {
 }
 .hero figure {
   width: 100%;
-  height: auto;
+  height: 50%;
   overflow: hidden;
 }
 .hero figure img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (min-width: 820px) {
   .hero figure {
@@ -973,7 +975,7 @@ section ul li p span {
 }
 .contact .contact-container .contact-item .contact-icon i {
   font-size: 2rem;
-  color: #000;
+  color: #233161;
 }
 .contact .contact-container .contact-item .contact-info h2 {
   font-size: 1.1rem;
@@ -1076,7 +1078,7 @@ section ul li p span {
   border-color: #485563;
   resize: none;
   margin-top: 0.25rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .contact .contact-form form label input::placeholder, .contact .contact-form form label textarea::placeholder {
   opacity: 0.5;
@@ -1098,7 +1100,7 @@ section ul li p span {
   padding: 1rem;
   width: 11rem;
   text-transform: capitalize;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   cursor: pointer;
   background: linear-gradient(0deg, #233161, #314489);
@@ -1302,7 +1304,7 @@ section ul li p span {
 footer {
   min-height: 20vh;
   width: 100%;
-  background: linear-gradient(0deg, #000 30%, #0a0c0f);
+  background: linear-gradient(0deg, #233161 30%, #314489);
   padding: 5vh 5vw 8vh;
   border: 2px solid #314489;
 }
@@ -1317,8 +1319,9 @@ footer .copyright {
 footer .copyright p {
   line-height: 1.7;
 }
-footer .copyright p a {
+footer .copyright p a, footer .copyright p span {
   text-decoration: none;
+  color: inherit;
 }
 
 *, ::before, ::after {
@@ -1333,7 +1336,7 @@ html {
 
 body {
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
 }
 body a, body span {
