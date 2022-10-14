@@ -1306,7 +1306,6 @@ footer {
   width: 100%;
   background: linear-gradient(0deg, #233161 30%, #314489);
   padding: 5vh 5vw 8vh;
-  border: 2px solid #314489;
 }
 footer .copyright {
   border-radius: 1rem;
