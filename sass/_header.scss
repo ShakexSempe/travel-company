@@ -27,7 +27,7 @@ header {
         width: max-content;
         transition: 1s;
         text-align: left;
-        transform: translateY(0);
+        // transform: translateY(0);
         @include md {
             // width: 10rem;
             text-align: left;
@@ -42,7 +42,7 @@ header {
             letter-spacing: .05rem;
             // font-family: $font-title;
             span{
-                color: $text-light;
+                color: $brand;
                 // font-family: $font-title;
             }
             @include md {
@@ -465,7 +465,7 @@ header {
         // background: transparent;
         // background: #000;
         .logo {
-            transform: translateY(-10vh);
+            // transform: translateY(-10vh);
         }
     } 
 }
