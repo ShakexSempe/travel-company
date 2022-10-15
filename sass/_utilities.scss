@@ -25,7 +25,7 @@
     // ACTIVE CLASS
     &.active {
         transform: scale(.95);
-        background: $brand;
+        background: $btn-overlay;
         .aside-menu {
             letter-spacing: normal;
             color: $text-light;
