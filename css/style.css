@@ -757,8 +757,9 @@ header.hero-header .logo {
 }
 .hero .slogan {
   width: 100%;
+  position: relative;
+  top: 5vh;
   padding: 0.2rem;
-  background: rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 768px) {
   .hero .slogan {

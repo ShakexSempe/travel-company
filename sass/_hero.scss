@@ -51,8 +51,10 @@
         // text-align: center;
         // position: sticky;
         // top: 15vh;
+        position: relative;
+        top: 5vh;
         padding: .2rem;
-        background: hsla(0, 0%, 100%, .5);
+        // background: hsla(0, 0%, 100%, .5);
         @include md {
             // top: 20vh;
             background: none;
