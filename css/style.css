@@ -846,6 +846,9 @@ header.aside-header .logo {
 .hero .slogan p {
   margin-bottom: 1rem;
 }
+.hero .slogan .cta .btn {
+  font-size: 1.15rem;
+}
 .hero figure {
   width: 70%;
   height: auto;
