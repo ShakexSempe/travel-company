@@ -27,6 +27,7 @@ header {
         width: max-content;
         transition: 1s;
         text-align: left;
+        transform: translateY(0);
         @include md {
             // width: 10rem;
             text-align: left;
@@ -464,7 +465,7 @@ header {
         // background: transparent;
         // background: #000;
         .logo {
-            // border: $border-light-sm;
+            transform: translateY(-10vh);
         }
     } 
 }
