@@ -712,7 +712,7 @@ header.aside-header .logo {
   width: 100%;
   height: 100vh;
   padding: 10vh 5vw;
-  background: linear-gradient(0deg, transparent 50%, #fff 60%);
+  background: linear-gradient(0deg, transparent 45%, #fff 55%);
   position: relative;
   isolation: isolate;
 }
@@ -773,7 +773,7 @@ header.aside-header .logo {
 }
 .hero .slogan h2 {
   color: #314489;
-  margin: 0.5rem 0 1rem;
+  margin: 1rem 0 0.5rem;
   text-transform: uppercase;
   font-size: 1.1rem;
 }
