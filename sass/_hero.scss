@@ -33,7 +33,7 @@
         z-index: -1;
         opacity: .9;
         @include lg {
-            background-attachment: fixed;
+        background-attachment: fixed;
 
         }
     }
@@ -54,7 +54,7 @@
         padding: .2rem;
         background: hsla(0, 0%, 100%, .5);
         @include md {
-            top: 35vh;
+            top: 20vh;
             background: none;
         }
         

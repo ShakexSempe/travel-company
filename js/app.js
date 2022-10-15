@@ -84,7 +84,7 @@ titles.forEach(title => {
 
 const ioItem = document.querySelectorAll('.io-item');
 const itemOptions = {
-    rootMargin: '0px 0px -50% 0px', 
+    rootMargin: '0px 0px -30% 0px', 
 } 
 
 ioItem.forEach(item => {
