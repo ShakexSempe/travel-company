@@ -246,6 +246,43 @@
   transform: translateY(0);
 }
 
+.pad-logo {
+  width: 100%;
+  padding: 10vh 5vw;
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 768px) {
+  .pad-logo {
+    height: 100vh;
+    padding: 5vh 10vw;
+    background-image: url(../img/ftt-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+.pad-logo img {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .pad-logo img {
+    display: none;
+  }
+}
+.pad-logo.io-item img {
+  transform: scale(1.5);
+  opacity: 0;
+  transition: 1.5s;
+}
+.pad-logo.active-item img {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .showcase {
   width: 100%;
   padding: 10vh 5vw 5vh;
@@ -720,14 +757,11 @@ header.hero-header .logo {
 }
 .hero .slogan {
   width: 100%;
-  position: sticky;
-  top: 15vh;
   padding: 0.2rem;
   background: rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 768px) {
   .hero .slogan {
-    top: 20vh;
     background: none;
   }
 }

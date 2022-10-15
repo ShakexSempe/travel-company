@@ -49,12 +49,12 @@
         // border: 1px solid red;
         width: 100%;
         // text-align: center;
-        position: sticky;
-        top: 15vh;
+        // position: sticky;
+        // top: 15vh;
         padding: .2rem;
         background: hsla(0, 0%, 100%, .5);
         @include md {
-            top: 20vh;
+            // top: 20vh;
             background: none;
         }
         
