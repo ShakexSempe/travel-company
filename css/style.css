@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&display=swap");
 .menu {
   border: 1px solid #0003;
   background: linear-gradient(90deg, #fafafa 100%, #fff 0%);
@@ -518,7 +518,7 @@ header aside ul li.aside-dropdown {
 }
 header aside ul li.aside-dropdown button {
   text-transform: capitalize;
-  font-family: "Roboto", sans-serif;
+  font-family: "Figtree", sans-serif;
   color: #fafafa;
   font-size: 1rem;
   background: transparent;
@@ -1287,7 +1287,7 @@ section ul li p span {
   border-color: #485563;
   resize: none;
   margin-top: 0.25rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 .contact .contact-form form label input::placeholder, .contact .contact-form form label textarea::placeholder {
   opacity: 0.5;
@@ -1309,7 +1309,7 @@ section ul li p span {
   padding: 1rem;
   width: 11rem;
   text-transform: capitalize;
-  font-family: "Roboto", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1rem;
   cursor: pointer;
   background: linear-gradient(0deg, #233161, #314489);
@@ -1544,7 +1544,7 @@ html {
 
 body {
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Figtree", sans-serif;
   position: relative;
 }
 body a, body span {
