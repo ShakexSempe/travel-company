@@ -381,7 +381,8 @@
     padding: 10vh 5vw 5vh;
     // background-color: red;
     @include md {
-    padding: 10vh 10vw 5vh;
+    padding: 10vh 10vw;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -393,29 +394,44 @@
         h2 {
             text-transform: capitalize;
             color: $brand;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.5rem;
         }
+        p {
+            margin: 1rem 0;
+        }
         @include md {
-            padding: .5rem;
-            background: #f4f4f4;
+            padding: 1rem;
+            background: #fafafa;
             h2 {
                 font-size: 2.5rem;
-                padding: 1rem;
+            }
+            p {
+                font-size: 1.25rem;
             }
         }
 
         &.io-item {
             h2 {
                 opacity: 0;
-                letter-spacing: .08rem;
+                transform: translateX(2rem);
                 transition: 1.5s;
+            }
+            p {
+                opacity: 0;
+                transition: 1.5s;
+                transform: translateY(1rem);
+                transition-delay: .5s;
             }
         }
         &.active-item {
             h2 {
                 opacity: 1;
-                letter-spacing: normal;
+                transform: translateX(0);
+            }
+            p {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }
