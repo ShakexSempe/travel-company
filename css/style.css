@@ -32,6 +32,56 @@
   color: #fafafa;
 }
 
+.hamburger {
+  border: 2px solid #fff;
+  border: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+@media (min-width: 820px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger .bar {
+  height: 0.125rem;
+  width: 100%;
+  background: #314489;
+  border-radius: 0.5rem;
+  position: relative;
+  border: none;
+  transition: 0.25s;
+}
+.hamburger .bar::before, .hamburger .bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #000;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: 0.25s;
+  z-index: -1;
+}
+.hamburger .bar::before {
+  transform: translateY(-0.4rem);
+}
+.hamburger .bar::after {
+  transform: translateY(0.4rem);
+}
+.hamburger.active .bar {
+  transform: translateX(-0.25rem);
+}
+.hamburger.active .bar::before {
+  transform: translateY(-0.4rem) translateX(0.25rem);
+}
+.hamburger.active .bar::after {
+  transform: translateY(0.4rem) translateX(-0.25rem);
+}
+
 .btn {
   display: flex;
   position: relative;
