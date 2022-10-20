@@ -26,6 +26,9 @@
         width: 100%;
         height: 100%;
         background-image: url('../img/hero.jpg');
+        background-image: url('../img/holden-baxter-oxQ0egaQMfU-unsplash.jpg');
+        background-image: url('https://images.unsplash.com/photo-1656491367122-8f6e1074a309?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+        background-image: url('../img/isaac-martin-B4Ba0vc-vYY-unsplash.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -34,6 +37,8 @@
         opacity: .9;
         @include lg {
         background-attachment: fixed;
+        background-image: url('https://images.unsplash.com/photo-1562859858-d49a4c273af5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=868&q=80');
+        background-image: url('../img/jesse-bowser-c0I4ahyGIkA-unsplash.jpg');
 
         }
     }
@@ -89,6 +94,7 @@
     }
 
     figure {
+        display: none;
         // border: 1px solid #0005;
         width: 70%;
         height: auto;
