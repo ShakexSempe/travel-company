@@ -231,7 +231,7 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 0.5rem;
-  transform: translateY(8vh);
+  transform: translateY(10vh);
   transition: 0.5s;
 }
 .footer-nav .item {
