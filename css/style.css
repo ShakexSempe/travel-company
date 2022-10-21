@@ -825,7 +825,6 @@ header.aside-header .logo {
   width: 100%;
   position: relative;
   top: 5vh;
-  padding: 0.2rem;
   text-transform: capitalize;
 }
 @media (min-width: 768px) {
