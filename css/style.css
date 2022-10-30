@@ -71,6 +71,7 @@
 }
 .hamburger .bar::after {
   transform: translateY(0.4rem);
+  background: #314489;
 }
 .hamburger.active .bar {
   transform: translateX(-0.25rem);

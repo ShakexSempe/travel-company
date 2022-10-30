@@ -58,7 +58,7 @@
             content: '';
             position: absolute;
             left: 0;
-        background: #000;
+            background: #000;
             height: 100%;
             width: 100%;
             border-radius: $border-radius-sm;
@@ -70,6 +70,7 @@
         }
         &::after {
             transform: translateY(.4rem);
+            background: $brand;
         }
     }
 
