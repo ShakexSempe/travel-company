@@ -222,7 +222,7 @@
 
 .footer-nav {
   position: fixed;
-  z-index: 15;
+  z-index: 5;
   bottom: 0;
   height: auto;
   width: 100%;
