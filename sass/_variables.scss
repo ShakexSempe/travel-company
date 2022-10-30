@@ -26,9 +26,10 @@ $brand-purple: hsl(300, 100%, 65%);
 $brand: #314489;
 $brand-light: #f4f4f4;
 $brand-light: hsl(227, 47%, 46%);
-$brand-dark: hsl(227, 47%, 26%);
+$brand-dark: hsl(227, 47%, 30%);
 $brand-darker: hsl(227, 47%, 16%);
 $aside-bg: linear-gradient(90deg, hsl(227, 47%, 6%), hsl(227, 47%, 10%));
+$aside-bg: linear-gradient(90deg, $brand-dark, $brand);
 
 // SPAN COLORS
 $span-gold: #ead2a1;

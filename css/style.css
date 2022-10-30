@@ -221,12 +221,12 @@
 
 .footer-nav {
   position: fixed;
-  z-index: 5;
+  z-index: 15;
   bottom: 0;
   height: auto;
   width: 100%;
   padding: 0.5rem 5vw;
-  background: linear-gradient(0deg, #161e3c 30%, #233161);
+  background: linear-gradient(0deg, #161e3c 30%, #293870);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -467,7 +467,7 @@ header .logo a span {
 }
 header aside {
   position: absolute;
-  background: linear-gradient(90deg, #080b16, #0e1325);
+  background: linear-gradient(90deg, #293870, #314489);
   width: 100%;
   height: 100vh;
   top: 7vh;
@@ -476,6 +476,7 @@ header aside {
   overflow: hidden;
   padding: 5vh 0;
   transition: 0.5s;
+  z-index: 10;
 }
 @media (min-width: 820px) {
   header aside {
@@ -1191,7 +1192,7 @@ section ul li p span {
 }
 .contact .contact-container .contact-item .contact-icon i {
   font-size: 2rem;
-  color: #233161;
+  color: #293870;
 }
 .contact .contact-container .contact-item .contact-info h2 {
   font-size: 1.1rem;
@@ -1520,7 +1521,7 @@ section ul li p span {
 footer {
   min-height: 20vh;
   width: 100%;
-  background: linear-gradient(0deg, #233161 30%, #314489);
+  background: linear-gradient(0deg, #293870 30%, #314489);
   padding: 5vh 5vw 10vh;
 }
 footer .copyright {
