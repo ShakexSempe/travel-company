@@ -176,7 +176,7 @@ header {
                             }
                         }
                         .dropdown-content {
-                            height: 35vh;
+                            height: 15vh;
 
                             a {
                                 opacity: 1;
@@ -216,17 +216,17 @@ header {
                 color: $text-light;
                 opacity: 0;
                 transition: 1s;
+                margin-left: .25rem;
                 
                 i {
+                    // border-right: 2px solid red;
                     // padding-right: .5rem;
-                color: $brand-light;
+                    color: #fff8;
                     width: 1.5rem;
-                    font-size: 1.25em;
-                    padding-bottom: .25rem;
+                    font-size: 1em;
                     transform: translateX(-1rem);
                     // opacity: 0;
                     transition: .5s;
-                    display: block;
                 }
             }
         }

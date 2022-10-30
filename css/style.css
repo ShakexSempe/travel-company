@@ -566,7 +566,7 @@ header aside ul li.aside-dropdown:hover button i {
   transform: rotate(180deg);
 }
 header aside ul li.aside-dropdown:hover .dropdown-content {
-  height: 35vh;
+  height: 15vh;
 }
 header aside ul li.aside-dropdown:hover .dropdown-content a {
   opacity: 1;
@@ -600,15 +600,14 @@ header aside .contact-links a {
   color: #fafafa;
   opacity: 0;
   transition: 1s;
+  margin-left: 0.25rem;
 }
 header aside .contact-links a i {
-  color: #3e56ac;
+  color: #fff8;
   width: 1.5rem;
-  font-size: 1.25em;
-  padding-bottom: 0.25rem;
+  font-size: 1em;
   transform: translateX(-1rem);
   transition: 0.5s;
-  display: block;
 }
 header aside.active {
   transform: translateX(5vw);
