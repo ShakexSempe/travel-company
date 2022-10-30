@@ -21,6 +21,8 @@ header {
     .logo {
         // background: #000;
         border: $border-dark-sm;
+        border-right-color: $brand;
+        border-bottom-color: $brand;
         padding: .15rem .5rem;
         overflow: hidden;
         width: 7rem;
