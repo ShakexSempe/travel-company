@@ -1,113 +1,81 @@
 .about {
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        @include md {
-            flex-direction: row;
-        }
+    // border: 3px solid red;
+    width: 100%;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    @include md {
+        flex-direction: row;
+        justify-content: center;
+        // margin: 10vh 5vw 5vh;
+        margin: 10vh auto;
+        // gap: 1rem;
+        padding: 5vh 10vw;
     }
-    .about-article {
+    .about-item {
         // border: 1px solid red;
-        margin: 5vh 0;
-        overflow: hidden;
+        border-radius: .25rem;
+        transition: .25s;
+        padding: .5rem;
 
-        p {
-            line-height: 1.5;
-            font-size: 1rem;
-            font-weight: 500;
-            color: $overlay-blue-dark;
-            margin-bottom: 1rem;
-            transition: 1s;
-            @include md {
-                font-size: 1.05rem;
+        figure {
+            margin-bottom: .25rem;
+            i {
+                font-size: 2rem;
+                opacity: 1;
+                color: $brand;
             }
-            &.article-intro {
-                font-weight: 600;
+        }
 
-                &::first-letter {
-                    color: $brand;
-                    font-family: $font-title;
-                    font-size: 2rem;
-                    float: left;
-                    margin-right: .2rem;
-                    // border: 1px solid blue;
-                    border-radius: .25rem;
-                    padding: 0 .3rem 0 .25rem;
-                    background: $overlay-dark;
-                    text-shadow: 2px 2px 0px #000;
-                    box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
-                    @include md {
-                        font-size: 2.5rem;
-                    }
+        h3 {
+            text-transform: capitalize;
+            margin-bottom: .25rem;
+        }
+
+        &:hover {
+            transform: scale(1.015);
+            box-shadow: -1px -3px 5px rgba(0, 0, 255, .15);
+            figure {
+                i {
+                    color: #000;
                 }
             }
-
-            // IO ITEM 
-            &.io-item {
-                opacity: .1;
-                transform: translateY(1rem);
-            }
-            &.active-item {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
-
-    
-    }
-
-    .about-img {
-        // border: 2px solid red;
-        overflow: hidden;
-        border-radius: $border-radius-sm;
-
-        img {
-            width: 100%;
-            transition: 1s;
-        }
-
-        @include md {
-            width: 100%;
-            opacity: 1;
-            // position: relative;
-            // top: -30vh;
-        }
-
-        // IO CLASS
+        // IO CLASSES
         &.io-item {
-            img {
-                transform: scale(2);
-                opacity: 1;
+            figure {
+                transform: translateY(-1rem);
+                opacity: 0;
+                transition: 1s;
+            }
+            h3 {
+                transform: translateX(1rem);
+                opacity: 0;
+                transition: 1s;
+            }
+            p {
+                opacity: 0;
+                transform: translateY(.5rem);
+                transition: 1s;
             }
         }
         &.active-item {
-            img {
-            transform: scale(1);
-            opacity: 1;
-            transition: 1.5s;
+            figure {
+                transform: translateY(0);
+                opacity: 1;
             }
-
-
+            h3 {
+                transform: translateX(0);
+                opacity: 1;
+                transition-delay: .25s;
+            }
+            p {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: .5s;
+            }
         }
     }
-
-        // ABOUT BTN
-        .about-btn {
-            font-size: 1rem;
-            margin: 5vh 0 1rem;
-            @include md {
-                margin-top: -5vh;
-            }
-
-            &::before {
-                background: $btn-brand-light;
-                border: none;
-                box-shadow: $box-shadow;
-            }
-            &::after {
-                background: $btn-brand-light-hover;
-                border: $border-light-sm;
-                box-shadow: $box-shadow-hover;
-            }
-        }
 }

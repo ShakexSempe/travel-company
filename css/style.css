@@ -785,7 +785,7 @@ header.aside-header .logo {
   width: 100%;
   height: 100vh;
   padding: 10vh 5vw;
-  background: linear-gradient(0deg, transparent 45%, #fff 55%);
+  background: linear-gradient(0deg, transparent 35%, #fff 50%);
   position: relative;
   isolation: isolate;
 }
@@ -841,7 +841,7 @@ header.aside-header .logo {
   }
 }
 .hero .slogan h1 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   line-height: 1.5;
 }
 @media (min-width: 820px) {
@@ -1429,101 +1429,74 @@ section ul li p span {
   border-radius: 0.5rem;
 }
 
-.about .flex-container {
+.about {
+  width: 100%;
+  padding: 5vh 5vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 5vh;
 }
 @media (min-width: 768px) {
-  .about .flex-container {
+  .about {
     flex-direction: row;
+    justify-content: center;
+    margin: 10vh auto;
+    padding: 5vh 10vw;
   }
 }
-.about .about-article {
-  margin: 5vh 0;
-  overflow: hidden;
+.about .about-item {
+  border-radius: 0.25rem;
+  transition: 0.25s;
+  padding: 0.5rem;
 }
-.about .about-article p {
-  line-height: 1.5;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #29323c;
-  margin-bottom: 1rem;
+.about .about-item figure {
+  margin-bottom: 0.25rem;
+}
+.about .about-item figure i {
+  font-size: 2rem;
+  opacity: 1;
+  color: #314489;
+}
+.about .about-item h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.25rem;
+}
+.about .about-item:hover {
+  transform: scale(1.015);
+  box-shadow: -1px -3px 5px rgba(0, 0, 255, 0.15);
+}
+.about .about-item:hover figure i {
+  color: #000;
+}
+.about .about-item.io-item figure {
+  transform: translateY(-1rem);
+  opacity: 0;
   transition: 1s;
 }
-@media (min-width: 768px) {
-  .about .about-article p {
-    font-size: 1.05rem;
-  }
+.about .about-item.io-item h3 {
+  transform: translateX(1rem);
+  opacity: 0;
+  transition: 1s;
 }
-.about .about-article p.article-intro {
-  font-weight: 600;
+.about .about-item.io-item p {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: 1s;
 }
-.about .about-article p.article-intro::first-letter {
-  color: #314489;
-  font-family: "Noto Sans Ethiopic", serif;
-  font-size: 2rem;
-  float: left;
-  margin-right: 0.2rem;
-  border-radius: 0.25rem;
-  padding: 0 0.3rem 0 0.25rem;
-  background: linear-gradient(0deg, #0a0c0f 30%, #29323c);
-  text-shadow: 2px 2px 0px #000;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+.about .about-item.active-item figure {
+  transform: translateY(0);
+  opacity: 1;
 }
-@media (min-width: 768px) {
-  .about .about-article p.article-intro::first-letter {
-    font-size: 2.5rem;
-  }
+.about .about-item.active-item h3 {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.25s;
 }
-.about .about-article p.io-item {
-  opacity: 0.1;
-  transform: translateY(1rem);
-}
-.about .about-article p.active-item {
+.about .about-item.active-item p {
   opacity: 1;
   transform: translateY(0);
-}
-.about .about-img {
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-.about .about-img img {
-  width: 100%;
-  transition: 1s;
-}
-@media (min-width: 768px) {
-  .about .about-img {
-    width: 100%;
-    opacity: 1;
-  }
-}
-.about .about-img.io-item img {
-  transform: scale(2);
-  opacity: 1;
-}
-.about .about-img.active-item img {
-  transform: scale(1);
-  opacity: 1;
-  transition: 1.5s;
-}
-.about .about-btn {
-  font-size: 1rem;
-  margin: 5vh 0 1rem;
-}
-@media (min-width: 768px) {
-  .about .about-btn {
-    margin-top: -5vh;
-  }
-}
-.about .about-btn::before {
-  background: linear-gradient(90deg, #0a0c0f, #485563);
-  border: none;
-  box-shadow: inset 2px 2px 2px rgba(225, 225, 225, 0.3), inset -2px -2px 3px rgba(0, 0, 0, 0.35), 4px 4px 2px rgba(0, 0, 0, 0.15);
-}
-.about .about-btn::after {
-  background: linear-gradient(90deg, #485563, #0a0c0f);
-  border: 0.105rem solid rgba(255, 255, 255, 0.2);
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25), inset -2px -2px 2px rgba(221, 221, 221, 0.25), 0px 4px 1px rgba(0, 0, 0, 0.15);
+  transition-delay: 0.5s;
 }
 
 footer {
@@ -1655,14 +1628,11 @@ body a, body span {
 .container main {
   min-height: 100vh;
   width: 100%;
+  padding: 5vh 0 0;
 }
 .container main section {
-  min-height: 100vh;
   width: 100%;
-  padding: 10vh 5vw;
-  background: linear-gradient(90deg, #fafafa 100%, #fff 0%);
   position: relative;
-  border: none;
 }
 .container main section .section-title {
   position: relative;
