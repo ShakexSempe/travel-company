@@ -1434,17 +1434,21 @@ section ul li p span {
   padding: 5vh 5vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5vh;
 }
 @media (min-width: 768px) {
   .about {
     flex-direction: row;
-    margin: 10vh auto 5vh;
-    gap: 1rem;
+    justify-content: center;
+    margin: 10vh auto;
+    padding: 5vh 10vw;
   }
 }
 .about .about-item {
+  border-radius: 0.25rem;
   transition: 0.25s;
+  padding: 0.5rem;
 }
 .about .about-item figure {
   margin-bottom: 0.25rem;
@@ -1460,6 +1464,39 @@ section ul li p span {
 }
 .about .about-item:hover {
   transform: scale(1.015);
+  box-shadow: -1px -3px 5px rgba(0, 0, 255, 0.15);
+}
+.about .about-item:hover figure i {
+  color: #000;
+}
+.about .about-item.io-item figure {
+  transform: translateY(-1rem);
+  opacity: 0;
+  transition: 1s;
+}
+.about .about-item.io-item h3 {
+  transform: translateX(1rem);
+  opacity: 0;
+  transition: 1s;
+}
+.about .about-item.io-item p {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: 1s;
+}
+.about .about-item.active-item figure {
+  transform: translateY(0);
+  opacity: 1;
+}
+.about .about-item.active-item h3 {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+.about .about-item.active-item p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
 }
 
 footer {
@@ -1596,7 +1633,6 @@ body a, body span {
 .container main section {
   width: 100%;
   position: relative;
-  border: none;
 }
 .container main section .section-title {
   position: relative;
