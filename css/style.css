@@ -841,7 +841,8 @@ header.aside-header .logo {
   }
 }
 .hero .slogan h1 {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 @media (min-width: 820px) {
   .hero .slogan h1 {
@@ -1526,7 +1527,7 @@ section ul li p span {
 }
 
 footer {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background: linear-gradient(0deg, #293870 30%, #314489);
   padding: 15vh 5vw 10vh;
@@ -1539,7 +1540,6 @@ footer {
 @media (min-width: 768px) {
   footer {
     height: 70vh;
-    min-height: 70vh;
     flex-direction: row;
     justify-content: space-evenly;
     justify-content: space-between;
@@ -1585,26 +1585,17 @@ footer .footer-contact p a:hover {
   color: skyblue;
 }
 footer .footer-logo {
+  background-color: #fff;
   width: auto;
-  height: 50%;
+  height: auto;
   border-radius: 0.25rem;
   overflow: hidden;
 }
 footer .footer-logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-}
-@media (min-width: 576px) {
-  footer .footer-logo {
-    width: auto;
-    height: 40vh;
-  }
-  footer .footer-logo img {
-    width: auto;
-    height: 100%;
-  }
 }
 @media (min-width: 768px) {
   footer .footer-logo {
