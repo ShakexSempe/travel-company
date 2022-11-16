@@ -436,7 +436,7 @@ header {
   }
 }
 header .logo {
-  border: 0.12rem solid #000;
+  border: 0.1rem solid #000;
   border-right-color: #314489;
   border-bottom-color: #314489;
   padding: 0.15rem 0.5rem;
@@ -445,6 +445,7 @@ header .logo {
   width: max-content;
   transition: 1s;
   text-align: left;
+  border-radius: 0.25rem;
 }
 @media (min-width: 768px) {
   header .logo {
