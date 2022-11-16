@@ -1434,13 +1434,17 @@ section ul li p span {
   padding: 5vh 5vw;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 5vh;
 }
 @media (min-width: 768px) {
   .about {
     flex-direction: row;
-    margin: 10vh auto;
+    margin: 10vh auto 5vh;
+    gap: 1rem;
   }
+}
+.about .about-item {
+  transition: 0.25s;
 }
 .about .about-item figure {
   margin-bottom: 0.25rem;
@@ -1453,6 +1457,9 @@ section ul li p span {
 .about .about-item h3 {
   text-transform: capitalize;
   margin-bottom: 0.25rem;
+}
+.about .about-item:hover {
+  transform: scale(1.015);
 }
 
 footer {
