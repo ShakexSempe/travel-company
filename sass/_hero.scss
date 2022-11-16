@@ -9,7 +9,7 @@
     // justify-content: space-evenly;
     // align-items: center;
     // background: linear-gradient(90deg, #fff, transparent);
-    background: linear-gradient(0deg, transparent 45%, #fff 55%);
+    background: linear-gradient(0deg, transparent 35%, #fff 50%);
     // background: linear-gradient(0deg, #fff000 60%, #000 80%);
     // background: #fff8;
     // background: conic-gradient(transparent, #fff7, #fff7, #fff);
@@ -67,7 +67,7 @@
         
         h1 {
             // text-shadow: 1px 1px 2px #fff;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             line-height: 1.5;
             @include lg {
                 font-size: 2.5rem;
