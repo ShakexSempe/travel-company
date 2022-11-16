@@ -98,6 +98,7 @@
   transition: 0.25s;
   isolation: isolate;
   border: 0.125rem solid transparent;
+  border-radius: 0.5rem;
 }
 .btn::before, .btn::after {
   content: "";
@@ -107,6 +108,7 @@
   width: 100%;
   height: 100%;
   transition: 0.25s;
+  border-radius: 0.5rem;
   z-index: -1;
 }
 .btn::before {
@@ -395,6 +397,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 @media (min-width: 768px) {
   .showcase .showcase-img {
@@ -436,7 +439,7 @@ header {
   }
 }
 header .logo {
-  border: 0.12rem solid #000;
+  border: 0.1rem solid #000;
   border-right-color: #314489;
   border-bottom-color: #314489;
   padding: 0.15rem 0.5rem;
@@ -445,6 +448,7 @@ header .logo {
   width: max-content;
   transition: 1s;
   text-align: left;
+  border-radius: 0.25rem;
 }
 @media (min-width: 768px) {
   header .logo {
@@ -837,7 +841,8 @@ header.aside-header .logo {
   }
 }
 .hero .slogan h1 {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 @media (min-width: 820px) {
   .hero .slogan h1 {
@@ -1522,17 +1527,29 @@ section ul li p span {
 }
 
 footer {
-  min-height: 20vh;
+  height: 100vh;
   width: 100%;
   background: linear-gradient(0deg, #293870 30%, #314489);
-  padding: 5vh 5vw 10vh;
+  padding: 15vh 5vw 10vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  footer {
+    height: 70vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 10vh 10vw 15vh;
+    gap: 0.5rem;
+  }
 }
 footer .copyright {
   border-radius: 1rem;
   color: #fff;
-  height: 50%;
-  width: 100%;
-  padding: 1rem;
   text-transform: capitalize;
 }
 footer .copyright p {
@@ -1546,6 +1563,55 @@ footer .copyright p a, footer .copyright p span {
 @media (min-width: 820px) {
   footer .copyright p {
     font-size: 1.05rem;
+  }
+}
+footer .footer-contact p {
+  color: #fafafa;
+  text-transform: capitalize;
+}
+footer .footer-contact p.item-title {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+footer .footer-contact p i {
+  width: 1.25rem;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+footer .footer-contact p a {
+  color: #fafafa;
+  text-transform: none;
+  text-decoration: none;
+  padding-left: 0.25rem;
+  transition: 0.2s;
+  line-height: 1.7;
+}
+footer .footer-contact p:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+footer .footer-contact p:hover a {
+  color: skyblue;
+}
+footer .footer-logo {
+  background-color: #fff;
+  width: auto;
+  height: auto;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+footer .footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+@media (min-width: 768px) {
+  footer .footer-logo {
+    width: auto;
+  }
+  footer .footer-logo img {
+    width: 100%;
   }
 }
 

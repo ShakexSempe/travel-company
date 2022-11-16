@@ -20,7 +20,7 @@ header {
 
     .logo {
         // background: #000;
-        border: .12rem solid #000;
+        border: .1rem solid #000;
         border-right-color: $brand;
         border-bottom-color: $brand;
         padding: .15rem .5rem;
@@ -29,6 +29,7 @@ header {
         width: max-content;
         transition: 1s;
         text-align: left;
+        border-radius: .25rem;
         // transform: translateY(0);
         @include md {
             // width: 10rem;

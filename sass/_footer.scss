@@ -1,17 +1,31 @@
 footer {
-    min-height: 20vh;
+    height: 100vh;
     width: 100%;
     background: $footer-bg;
-    padding: 5vh 5vw 10vh;
-    // border: 2px solid $brand;
+    padding: 15vh 5vw 10vh;
+    // border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+    @include md {
+        height: 70vh;
+        flex-direction: row;
+        justify-content: space-evenly;
+        justify-content: space-between;
+        padding: 10vh 10vw 15vh;
+        gap: .5rem;
+    }
     .copyright {
+        // border: 1px solid red;
         border-radius: 1rem;
         color: #fff;
-        height: 50%;
-        width: 100%;
-        padding: 1rem;
+        // height: 50%;
+        // width: 100%;
         text-transform: capitalize;
-
+        // padding: 1rem;
+        
         p {
             line-height: 1.7;
             font-size: .95rem;
@@ -21,6 +35,69 @@ footer {
             }
             @include lg {
                 font-size: 1.05rem;
+            }
+        }
+    }
+    .footer-contact {
+        // border: 1px solid red;
+        p {
+            color: $text-light;
+            text-transform: capitalize;
+            // CONTACT DETAILS TITLE
+            &.item-title {
+                margin-bottom: .5rem;
+                text-transform: uppercase;
+            }
+            i {
+                width: 1.25rem;
+                opacity: .7;
+                transition: .2s;
+            }
+            a {
+                color: $text-light;
+                text-transform: none;
+                text-decoration: none;
+                padding-left: .25rem;
+                transition: .2s;
+                line-height: 1.7;
+            }
+
+            &:hover {
+                i {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+                a {
+                    color: skyblue;
+                }
+            }
+        }
+    }
+    .footer-logo {
+        background-color: #fff;
+        // border: 3px solid red;
+        width: auto;
+        height: auto;
+        border-radius: .25rem;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        // @include sm {
+        //     width: auto;
+        //     height: 40vh;
+        //     img {
+        //         width: auto;
+        //         height: 100%;
+        //     }
+        // }
+        @include md {
+            width: auto;
+            img {
+                width: 100%;
             }
         }
     }
