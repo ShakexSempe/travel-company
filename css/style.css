@@ -98,6 +98,7 @@
   transition: 0.25s;
   isolation: isolate;
   border: 0.125rem solid transparent;
+  border-radius: 0.5rem;
 }
 .btn::before, .btn::after {
   content: "";
@@ -107,6 +108,7 @@
   width: 100%;
   height: 100%;
   transition: 0.25s;
+  border-radius: 0.5rem;
   z-index: -1;
 }
 .btn::before {
@@ -395,6 +397,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 @media (min-width: 768px) {
   .showcase .showcase-img {
