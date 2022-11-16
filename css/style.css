@@ -1573,15 +1573,24 @@ footer .footer-contact p.item-title {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
+footer .footer-contact p i {
+  width: 1.25rem;
+  opacity: 0.7;
+  transition: 0.2s;
+}
 footer .footer-contact p a {
   color: #fafafa;
   text-transform: none;
   text-decoration: none;
   padding-left: 0.25rem;
-  transition: 0.25s;
+  transition: 0.2s;
   line-height: 1.7;
 }
-footer .footer-contact p a:hover {
+footer .footer-contact p:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+footer .footer-contact p:hover a {
   color: skyblue;
 }
 footer .footer-logo {

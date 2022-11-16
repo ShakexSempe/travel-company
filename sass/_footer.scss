@@ -48,15 +48,26 @@ footer {
                 margin-bottom: .5rem;
                 text-transform: uppercase;
             }
-
+            i {
+                width: 1.25rem;
+                opacity: .7;
+                transition: .2s;
+            }
             a {
                 color: $text-light;
                 text-transform: none;
                 text-decoration: none;
                 padding-left: .25rem;
-                transition: .25s;
+                transition: .2s;
                 line-height: 1.7;
-                &:hover {
+            }
+
+            &:hover {
+                i {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+                a {
                     color: skyblue;
                 }
             }
