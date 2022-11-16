@@ -1522,22 +1522,25 @@ section ul li p span {
 }
 
 footer {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(0deg, #293870 30%, #314489);
-  padding: 10vh 5vw 10vh;
+  padding: 15vh 5vw 10vh;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   footer {
     height: 70vh;
+    min-height: 70vh;
     flex-direction: row;
     justify-content: space-evenly;
     justify-content: space-between;
     padding: 10vh 10vw 15vh;
+    gap: 0.5rem;
   }
 }
 footer .copyright {
@@ -1563,7 +1566,7 @@ footer .footer-contact p {
   text-transform: capitalize;
 }
 footer .footer-contact p.item-title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 footer .footer-contact p a {
@@ -1589,10 +1592,22 @@ footer .footer-logo img {
   object-fit: cover;
   object-position: center;
 }
+@media (min-width: 576px) {
+  footer .footer-logo {
+    width: auto;
+    height: 40vh;
+  }
+  footer .footer-logo img {
+    width: auto;
+    height: 100%;
+  }
+}
 @media (min-width: 768px) {
   footer .footer-logo {
     width: auto;
-    height: 100%;
+  }
+  footer .footer-logo img {
+    width: 100%;
   }
 }
 
