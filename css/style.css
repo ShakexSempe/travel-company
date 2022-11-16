@@ -1572,6 +1572,7 @@ footer .footer-contact p {
 footer .footer-contact p.item-title {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  font-weight: bold;
 }
 footer .footer-contact p i {
   width: 1.25rem;
