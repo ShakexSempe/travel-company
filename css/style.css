@@ -1468,6 +1468,7 @@ section ul li p span {
 }
 .about .about-item:hover figure i {
   color: #000;
+  transition: 0.5s;
 }
 .about .about-item.io-item figure {
   transform: translateY(-1rem);
