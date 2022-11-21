@@ -440,8 +440,6 @@ header {
 }
 header .logo {
   border: 0.1rem solid #000;
-  border-right-color: #314489;
-  border-bottom-color: #314489;
   padding: 0.15rem 0.5rem;
   overflow: hidden;
   width: 7rem;
