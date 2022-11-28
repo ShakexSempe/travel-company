@@ -75,9 +75,13 @@ body {
     main {
         min-height: 100vh;
         width: 100%;
-        padding: 5vh 0 0;
+        padding: 5vh 0 10vh;
         // border: 2px solid green;
         // border: none;
+        position: relative;
+        @include md {
+            padding: 0;
+        }
 
         section {
             width: 100%;

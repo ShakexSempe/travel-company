@@ -10,16 +10,18 @@
         flex-direction: row;
         justify-content: center;
         // margin: 10vh 5vw 5vh;
-        margin: 10vh auto;
+        margin: 0vh auto 10vh;
         // gap: 1rem;
-        padding: 5vh 10vw;
+        padding: 0vh 10vw 5vh; 
     }
     .about-item {
         // border: 1px solid red;
         border-radius: .25rem;
         transition: .25s;
         padding: .5rem;
-
+        @include md {
+            padding: 15vh 0 5vh;
+        }
         figure {
             margin-bottom: .25rem;
             i {
@@ -79,4 +81,26 @@
             }
         }
     }
+}
+
+.tilt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    // border: 2px solid red;
+}
+
+.tilt svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 109px;
+}
+
+.tilt .shape-fill {
+    fill: $brand;
 }

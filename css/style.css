@@ -1439,14 +1439,19 @@ section ul li p span {
   .about {
     flex-direction: row;
     justify-content: center;
-    margin: 10vh auto;
-    padding: 5vh 10vw;
+    margin: 0vh auto 10vh;
+    padding: 0vh 10vw 5vh;
   }
 }
 .about .about-item {
   border-radius: 0.25rem;
   transition: 0.25s;
   padding: 0.5rem;
+}
+@media (min-width: 768px) {
+  .about .about-item {
+    padding: 15vh 0 5vh;
+  }
 }
 .about .about-item figure {
   margin-bottom: 0.25rem;
@@ -1496,6 +1501,27 @@ section ul li p span {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.5s;
+}
+
+.tilt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.tilt svg {
+  position: relative;
+  display: block;
+  width: calc(127% + 1.3px);
+  height: 109px;
+}
+
+.tilt .shape-fill {
+  fill: #314489;
 }
 
 footer {
@@ -1627,7 +1653,13 @@ body a, body span {
 .container main {
   min-height: 100vh;
   width: 100%;
-  padding: 5vh 0 0;
+  padding: 5vh 0 10vh;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .container main {
+    padding: 0;
+  }
 }
 .container main section {
   width: 100%;
