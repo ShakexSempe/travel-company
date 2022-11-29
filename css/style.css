@@ -1517,7 +1517,7 @@ section ul li p span {
   position: relative;
   display: block;
   width: calc(127% + 1.3px);
-  height: 109px;
+  height: 50px;
 }
 
 .tilt .shape-fill {
