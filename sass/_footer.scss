@@ -8,7 +8,9 @@ footer {
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 5vh;
+    color: #fff;
+
     @include md {
         height: 70vh;
         flex-direction: row;
@@ -17,63 +19,7 @@ footer {
         padding: 10vh 10vw 15vh;
         gap: .5rem;
     }
-    .copyright {
-        // border: 1px solid red;
-        border-radius: 1rem;
-        color: #fff;
-        // height: 50%;
-        // width: 100%;
-        text-transform: capitalize;
-        // padding: 1rem;
-        
-        p {
-            line-height: 1.7;
-            font-size: .95rem;
-            a, span {
-                text-decoration: none;
-                color: inherit;
-            }
-            @include lg {
-                font-size: 1.05rem;
-            }
-        }
-    }
-    .footer-contact {
-        // border: 1px solid red;
-        p {
-            color: $text-light;
-            text-transform: capitalize;
-            // CONTACT DETAILS TITLE
-            &.item-title {
-                margin-bottom: .5rem;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-            i {
-                width: 1.25rem;
-                opacity: .7;
-                transition: .2s;
-            }
-            a {
-                color: $text-light;
-                text-transform: none;
-                text-decoration: none;
-                padding-left: .25rem;
-                transition: .2s;
-                line-height: 1.7;
-            }
 
-            &:hover {
-                i {
-                    opacity: 1;
-                    transform: scale(1.1);
-                }
-                a {
-                    color: skyblue;
-                }
-            }
-        }
-    }
     .footer-logo {
         background-color: #fff;
         // border: 3px solid red;
@@ -99,6 +45,39 @@ footer {
             width: auto;
             img {
                 width: 100%;
+            }
+        }
+    }
+
+    .footer-item {
+        h3 {
+            text-transform: capitalize;
+            margin-bottom: .5rem;
+        }
+
+        p{
+            line-height: 1.6;
+            text-transform: capitalize;
+
+            a {
+                display: inline-block;
+            }
+
+            span {
+                color: #fff;
+            }
+        }
+
+        a {
+            width: max-content;
+            // border: 2px solid red;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: .25rem 1rem .25rem 0;
+            i {
+                width: 1.5rem;
+                color: #ddd;
             }
         }
     }

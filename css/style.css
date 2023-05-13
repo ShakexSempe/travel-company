@@ -1533,7 +1533,8 @@ footer {
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 5vh;
+  color: #fff;
 }
 @media (min-width: 768px) {
   footer {
@@ -1544,53 +1545,6 @@ footer {
     padding: 10vh 10vw 15vh;
     gap: 0.5rem;
   }
-}
-footer .copyright {
-  border-radius: 1rem;
-  color: #fff;
-  text-transform: capitalize;
-}
-footer .copyright p {
-  line-height: 1.7;
-  font-size: 0.95rem;
-}
-footer .copyright p a, footer .copyright p span {
-  text-decoration: none;
-  color: inherit;
-}
-@media (min-width: 820px) {
-  footer .copyright p {
-    font-size: 1.05rem;
-  }
-}
-footer .footer-contact p {
-  color: #fafafa;
-  text-transform: capitalize;
-}
-footer .footer-contact p.item-title {
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-footer .footer-contact p i {
-  width: 1.25rem;
-  opacity: 0.7;
-  transition: 0.2s;
-}
-footer .footer-contact p a {
-  color: #fafafa;
-  text-transform: none;
-  text-decoration: none;
-  padding-left: 0.25rem;
-  transition: 0.2s;
-  line-height: 1.7;
-}
-footer .footer-contact p:hover i {
-  opacity: 1;
-  transform: scale(1.1);
-}
-footer .footer-contact p:hover a {
-  color: skyblue;
 }
 footer .footer-logo {
   background-color: #fff;
@@ -1612,6 +1566,31 @@ footer .footer-logo img {
   footer .footer-logo img {
     width: 100%;
   }
+}
+footer .footer-item h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+footer .footer-item p {
+  line-height: 1.6;
+  text-transform: capitalize;
+}
+footer .footer-item p a {
+  display: inline-block;
+}
+footer .footer-item p span {
+  color: #fff;
+}
+footer .footer-item a {
+  width: max-content;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 1rem 0.25rem 0;
+}
+footer .footer-item a i {
+  width: 1.5rem;
+  color: #ddd;
 }
 
 *, ::before, ::after {
