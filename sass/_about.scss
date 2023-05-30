@@ -5,25 +5,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5vh;
+    gap: 10vh;
+    background: #f4f4f4;
     @include md {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         // margin: 10vh 5vw 5vh;
-        margin: 0vh auto 10vh;
-        // gap: 1rem;
-        padding: 0vh 10vw 5vh; 
+        // margin: 0vh auto 10vh;
+        gap: 5vh;
+        padding: 5vh 10vw; 
+        height: 90vh;
     }
     .about-item {
         // border: 1px solid red;
-        border-radius: .25rem;
+        border-radius: .5rem;
         transition: .25s;
-        padding: .5rem;
+        padding: 1rem;
+        background: #fff;
+        box-shadow: 0 .5rem .5rem hsla(240, 100%, 25%, .1);
         @include md {
-            padding: 15vh 0 5vh;
+            // padding: 15vh 0 5vh;
+            padding: 2rem;
+            text-align: center;
         }
         figure {
-            margin-bottom: .25rem;
+            margin-bottom: .5rem;
             i {
                 font-size: 2rem;
                 opacity: 1;
@@ -33,7 +40,7 @@
 
         h3 {
             text-transform: capitalize;
-            margin-bottom: .25rem;
+            margin-bottom: .5rem;
         }
 
         &:hover {
@@ -41,9 +48,12 @@
             box-shadow: 1px 3px 3px rgba(0, 0, 0, .150);
             figure {
                 i {
-                    color: #000;
                     transition: .5s;
                 }
+            }
+            h3 {
+                color: $brand;
+                transition: .25s;
             }
         }
         // IO CLASSES
